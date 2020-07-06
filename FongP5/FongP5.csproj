@@ -55,11 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Address.cs" />
     <Compile Include="AluminumSprocket.cs" />
     <Compile Include="PlasticSprocket.cs" />
     <Compile Include="Sprocket.cs" />
+    <Compile Include="SprocketForm.xaml.cs">
+      <DependentUpon>SprocketForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SprocketOrder.cs" />
     <Compile Include="SteelSprocket.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="SprocketForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SprocketOrderForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,8 +76,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="SprocketOrderForm.xaml.cs">
+      <DependentUpon>SprocketOrderForm.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -98,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprocket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Sprocket.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

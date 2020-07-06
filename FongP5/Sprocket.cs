@@ -12,12 +12,7 @@ namespace FongP5
     public abstract class Sprocket
     {
         // Constructors
-        // Parameterless Constructor
-        /// <summary>
-        /// Parameterless Constructor
-        /// </summary>
-        protected Sprocket()
-        { }
+        
         // Overloaded Constructor
         /// <summary>
         /// Overloaded constructor
@@ -28,9 +23,18 @@ namespace FongP5
         /// 
         protected Sprocket(int itemID, int numItems, int numTeeth)
         {
-            ItemID = itemID;
+            OrderNum = itemID;
             NumItems = numItems;
             NumTeeth = numTeeth;
+            Calculate();
+        }
+
+        // Parameterless Constructor
+        /// <summary>
+        /// Parameterless Constructor
+        /// </summary>
+        protected Sprocket():this(-1,1,1)
+        {
         }
 
         // Properties
@@ -41,10 +45,7 @@ namespace FongP5
         public int NumItems
         {
             get => _numItems;
-            set
-            {
-                _numItems = value;
-            }
+            set{ _numItems = value; Calculate(); }
         }
 
         // Backing field for NumItems Property
@@ -59,10 +60,7 @@ namespace FongP5
         public int NumTeeth
         {
             get => _numTeeth;
-            set
-            {
-                _numTeeth = value;
-            }
+            set { _numTeeth = value; Calculate(); }
         }
         // NumTeeth backin field
         /// <summary>
@@ -75,18 +73,18 @@ namespace FongP5
         /// <summary>
         /// Read only ItemID Property
         /// </summary>
-        public int ItemID { get;  }
+        public int ItemID { get; set; }
         
         // Read only Price Property
         /// <summary>
         /// Read only Price Property
         /// </summary>
-        public decimal Price { get; }
+        public decimal Price { get; set; }
         // auto properties
         /// <summary>
         /// Order Number Property
         /// </summary>
-        public int OrderNum { get; set; }
+        public int OrderNum { get; set ; }
 
         // Methods
         // Abstract Calculate Method
@@ -96,8 +94,8 @@ namespace FongP5
         public abstract void Calculate(); 
         public override string ToString()
         {
-            return "Order Number: " + OrderNum + "Number: "
-                + NumItems +" Teeth: " + NumTeeth + "Price: " + Price;
+            return "Order Number: " + OrderNum + " Number of Items: "
+                + NumItems +" Teeth: " + NumTeeth + " Price: " + Price;
         }
         
     }

@@ -9,9 +9,23 @@ namespace FongP5
     class SteelSprocket : Sprocket
     {
         
+
+        SteelSprocket():base()
+        { }
+
+        public SteelSprocket(int itemID,int numItems, int numTeeth/*, int orderNum*/) :
+            base(itemID,numItems,numTeeth)
+        {
+           // OrderNum = orderNum;
+        }
         public override void Calculate()
         {
-            //throw new NotImplementedException();
+            Price = NumTeeth * .05M * NumItems;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Material: Steel";
         }
     }
 }
