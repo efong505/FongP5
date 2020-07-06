@@ -38,7 +38,7 @@ namespace FongP5
             if(itemForm.DialogResult == true)
             {
                order.Add(itemForm.Sprocket);
-                lBSprOrderForm.Items.Refresh();
+               lBSprOrderForm.Items.Refresh();
             }
         }
         // Yes or no box modal
@@ -109,7 +109,8 @@ namespace FongP5
             {
                 using (StreamWriter file = new StreamWriter(saveFile.OpenFile()))
                 {
-                    file.WriteLine(order.ToString());
+                    file.WriteLine(order.ToString() + "\n\n"+
+                        "Order(s):");
                     foreach (var sprocket in order.Items)
                     {
                         file.WriteLine(sprocket.ToString());
