@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FongP5"
         mc:Ignorable="d"
+       
         Title="SprocketForm" Height="330" Width="370">
     <Grid>
         <Label Content="Sprocket Form" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" FontSize="36"/>

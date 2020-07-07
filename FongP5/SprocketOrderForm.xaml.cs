@@ -27,7 +27,9 @@ namespace FongP5
         public SprocketOrderForm()
         {
             InitializeComponent();
-            lBSprOrderForm.ItemsSource = order.Items;
+
+            // list box on sprocket order form
+            lBSprOrderForm.ItemsSource = order.Items; // Bind order items to list box
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -37,8 +39,8 @@ namespace FongP5
             itemForm.ShowDialog();
             if(itemForm.DialogResult == true)
             {
-               order.Add(itemForm.Sprocket);
-               lBSprOrderForm.Items.Refresh();
+               order.Add(itemForm.Sprocket); // add item sprocket order to 
+               lBSprOrderForm.Items.Refresh(); // display list after item added
             }
         }
         // Yes or no box modal
@@ -49,13 +51,15 @@ namespace FongP5
         /// <param name="e"></param>
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
+            // if item selected in list box on sprocket order form then ask if sure with modal button
             if(lBSprOrderForm.SelectedItem != null)
             {
                 MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm",MessageBoxButton.YesNo);
                 if(result == MessageBoxResult.Yes)
                 {
-                    order.Remove((Sprocket)lBSprOrderForm.SelectedItem);
-                    lBSprOrderForm.Items.Refresh();
+                    // if yes clicked remove selected item in list box on sprocket order form
+                    order.Remove((Sprocket)lBSprOrderForm.SelectedItem); 
+                    lBSprOrderForm.Items.Refresh(); // display updated list after deleted item
                 }
             }
         }
@@ -69,7 +73,6 @@ namespace FongP5
         private void chkBLoclaPickUp_Checked(object sender, RoutedEventArgs e)
         {
             AddressGroup.Visibility = Visibility.Hidden;
-            
         }
 
         // show adderss group
@@ -83,6 +86,12 @@ namespace FongP5
             AddressGroup.Visibility = Visibility.Visible;
         }
 
+        // Save dialog
+        /// <summary>
+        /// Open Save Dialog and give user option to save order to file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             order.CustomerName = txtBCustName.Text;
@@ -98,7 +107,8 @@ namespace FongP5
                 order.Address.State = txtBState.Text;
                 order.Address.ZipCode = txtBZip.Text;
             }
-             txtBResults.Text = order.ToString();
+            
+            txtBResults.Text = order.ToString(); 
 
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.FileName = "Document";

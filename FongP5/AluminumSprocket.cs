@@ -24,13 +24,25 @@ namespace FongP5
         {
         }
 
+
+        //Overridden Calculate method
+        /// <summary>
+        /// Overridden Calculate method
+        /// </summary>
         public override void Calculate()
         {
             Price = NumTeeth * .04M * NumItems;
         }
+        // Overridden ToString() method
+        /// <summary>
+        /// Overriden ToString() method 
+        /// /// </summary>
+        /// <returns>
+        /// returns base ToString() and adds "Material: Aluminum" to it
+        /// </returns>
         public override string ToString()
         {
-            return base.ToString() + " Material: Aluminum";
+            return base.ToString() + ", Material: Aluminum";
         }
     }
 }

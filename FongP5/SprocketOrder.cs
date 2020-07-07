@@ -56,7 +56,7 @@ namespace FongP5
             string orderSummary = "";
 
             orderSummary += CustomerName + ": " +
-                items.Count + " items, Total Price: " + TotalPrice;
+                items.Count + " items, Total Price: $" + TotalPrice;
             if(Address != null)
             {
                 orderSummary += "\nShip To:\n" + Address;

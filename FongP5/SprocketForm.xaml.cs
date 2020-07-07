@@ -19,12 +19,14 @@ namespace FongP5
     /// </summary>
     public partial class SprocketForm : Window
     {
-        private Sprocket sprocket;
-        public Sprocket Sprocket
-        {
-            get => sprocket;
-            set { sprocket = value; }
-        }
+        // Sproket Property
+        /// <summary>
+        /// Sprocket property
+        /// </summary>
+        public Sprocket Sprocket { get; set; }
+        /// <summary>
+        /// Sprocket Form constructor
+        /// </summary>
         public SprocketForm()
         {
             InitializeComponent();
@@ -32,11 +34,16 @@ namespace FongP5
             
         }
 
+        // Clear the form
+        /// <summary>
+        /// Clears the form
+        /// </summary>
         private void ClearForm()
         {
             txtBItemID.Text = "";
             txtBNumTeeth.Text = "";
             txtBNumItems.Text = "";
+            
         }
 
         
@@ -52,15 +59,15 @@ namespace FongP5
             {
                 if (cmbBxItemType.Text == "steel")
                 {
-                    sprocket = new SteelSprocket(itemID, numTeeth, numItems);
+                    Sprocket = new SteelSprocket(itemID, numTeeth, numItems);
                 }
                 else if(cmbBxItemType.Text == "aluminum")
                 {
-                    sprocket = new AluminumSprocket(itemID, numTeeth, numItems);
+                    Sprocket = new AluminumSprocket(itemID, numTeeth, numItems);
                 }
                 else if(cmbBxItemType.Text == "plastic")
                 {
-                    sprocket = new PlasticSprocket(itemID, numTeeth, numItems);
+                    Sprocket = new PlasticSprocket(itemID, numTeeth, numItems);
                 }
                 DialogResult = true;
                 Close();

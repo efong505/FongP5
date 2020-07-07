@@ -94,8 +94,8 @@ namespace FongP5
         public abstract void Calculate(); 
         public override string ToString()
         {
-            return "Order Number: " + OrderNum + " Number of Items: "
-                + NumItems +" Teeth: " + NumTeeth + " Price: " + Price;
+            return "Order Number: " + OrderNum + ", Number of Items: "
+                + NumItems + ", Teeth: " + NumTeeth + ", Price: $" + Price;
         }
         
     }

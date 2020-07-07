@@ -25,13 +25,25 @@ namespace FongP5
             base(itemID, numItems, numTeeth)
         {
         }
+
+        // Overridden Calculate method
+        /// <summary>
+        /// Overridden Calculate method
+        /// </summary>
         public override void Calculate()
         {
             Price = NumTeeth * .02M * NumItems;
         }
+        // Overridden ToString() method
+        /// <summary>
+        /// Overridden ToString() method
+        /// </summary>
+        /// <returns>
+        /// returns base ToString() and adds "Material: Plastic" to it
+        /// </returns>
         public override string ToString()
         {
-            return base.ToString() + " Material: Plastic";
+            return base.ToString() + ", Material: Plastic";
         }
     }
 }

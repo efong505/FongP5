@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="Sprocket Order Form" Height="700" Width="650" Icon="Sprocket.png">
     <Grid>
+        <Grid.LayoutTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform X="-2"/>
+            </TransformGroup>
+        </Grid.LayoutTransform>
         <Label Content="Super Sprocket Order Manager 3000" HorizontalAlignment="Center" Margin="82,10,74,0" VerticalAlignment="Top" FontSize="26" FontFamily="Times New Roman" FontWeight="Bold"/>
         <Label x:Name="lblCustName" Content="Customer Name" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="txtBCustName" HorizontalAlignment="Left" Height="31" Margin="126,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" FontSize="14" VerticalContentAlignment="Center"/>
@@ -32,22 +40,22 @@
                     <BindingGroup/>
                 </Label.BindingGroup>
             </Label>
-            <Label x:Name="lblState" Content="State" HorizontalAlignment="Left" Margin="445,54,0,0" VerticalAlignment="Top" FontSize="14" Width="46">
+            <Label x:Name="lblState" Content="State" HorizontalAlignment="Left" Margin="415,54,0,0" VerticalAlignment="Top" FontSize="14" Width="46">
                 <Label.BindingGroup>
                     <BindingGroup/>
                 </Label.BindingGroup>
             </Label>
-            <Label x:Name="lblZip" Content="Zip Code" HorizontalAlignment="Left" Margin="515,54,0,0" VerticalAlignment="Top" Width="65">
+            <Label x:Name="lblZip" Content="Zip Code" HorizontalAlignment="Left" Margin="489,54,0,0" VerticalAlignment="Top" Width="65">
                 <Label.BindingGroup>
                     <BindingGroup/>
                 </Label.BindingGroup>
             </Label>
-            <TextBox x:Name="txtBState" HorizontalAlignment="Left" Height="31" Margin="418,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" FontSize="14" VerticalContentAlignment="Center" RenderTransformOrigin="0.646,0.177">
+            <TextBox x:Name="txtBState" HorizontalAlignment="Left" Height="31" Margin="418,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" FontSize="14" VerticalContentAlignment="Center" RenderTransformOrigin="0.646,0.177" SpellCheck.IsEnabled="True">
                 <TextBox.BindingGroup>
                     <BindingGroup/>
                 </TextBox.BindingGroup>
             </TextBox>
-            <TextBox x:Name="txtBZip" Height="31" Margin="491,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" HorizontalAlignment="Left" Width="97">
+            <TextBox x:Name="txtBZip" Height="31" Margin="491,80,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center" VerticalAlignment="Top" FontSize="14" HorizontalAlignment="Left" Width="97">
                 <TextBox.BindingGroup>
                     <BindingGroup/>
                 </TextBox.BindingGroup>
