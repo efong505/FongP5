@@ -15,7 +15,7 @@ namespace FongP5
         
         // Overloaded Constructor
         /// <summary>
-        /// Overloaded constructor
+        /// Default constructor
         /// </summary>
         /// <param name="itemID">ItemID</param>
         /// <param name="numItems">NumItems</param>
@@ -31,7 +31,7 @@ namespace FongP5
 
         // Parameterless Constructor
         /// <summary>
-        /// Parameterless Constructor
+        /// Overloaded Parameterless Constructor
         /// </summary>
         protected Sprocket():this(-1,1,1)
         {
